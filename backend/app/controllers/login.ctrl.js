@@ -1,6 +1,7 @@
 var loginCtrl = {}
 var registerModel = require('./../models/register.model')
 var security = require('./../utils/security')
+var jwt = require('jsonwebtoken')
 
 loginCtrl.get = function (req, res) {
     res.render('home', {
@@ -16,10 +17,17 @@ checkUser = async (req, res) => {
     var login = req.body
     login.password = security.encryptByMd5(login.password)
     let userInfo = await registerModel.findOne({ email: login.email })
-    userInfo?._id ?
-        userInfo.password === login.password ? res.status(200).send(userInfo._id) : res.status(401).send('Password is incorrect')
-        :
+    if (userInfo?._id) {
+        if (userInfo.password === login.password) {
+            var payload = { subject: userInfo._id }
+            var token = jwt.sign(payload, 'secretKey')
+            res.status(200).send({ token })
+        } else {
+            res.status(401).send('Password is incorrect')
+        }
+    } else {
         res.status(401).send('User not found')
+    }
 
 }
 
