@@ -14,7 +14,7 @@ registerCtrl.post = function (req, res) {
 saveUser = async (req, res) => {
     var user = new registerModel(req.body)
     let userInfo = await user.save()
-    userInfo._id ? 
+    userInfo?._id ? 
     res.status(200).send(userInfo._id)
     :
     res.status(401).send('User Not Saved')

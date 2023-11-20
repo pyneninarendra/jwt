@@ -95,3 +95,8 @@
 ::1 - - [20/Nov/2023:01:33:00 +0000] "GET /register HTTP/1.1" 200 2646 "http://localhost:4900/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
 ::1 - - [20/Nov/2023:01:33:00 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:4900/register" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
 ::1 - - [20/Nov/2023:01:33:49 +0000] "POST /register HTTP/1.1" 200 26 "http://localhost:4900/register" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+::1 - - [20/Nov/2023:01:39:34 +0000] "GET /login HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+::1 - - [20/Nov/2023:01:39:44 +0000] "POST /login HTTP/1.1" 200 26 "http://localhost:4900/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+::1 - - [20/Nov/2023:01:39:47 +0000] "GET /login HTTP/1.1" 200 2636 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+::1 - - [20/Nov/2023:01:39:53 +0000] "POST /login HTTP/1.1" 401 21 "http://localhost:4900/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+::1 - - [20/Nov/2023:01:40:51 +0000] "POST /login HTTP/1.1" 401 14 "http://localhost:4900/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
